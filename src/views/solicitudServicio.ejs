@@ -1,0 +1,34 @@
+<% include partials/_headersol %>
+
+<div class="container">
+
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-5 offset-md-4">
+      <div class="card">
+        <div class="card-body">
+          <form action="/add" method="post">
+            <div class="form-group">
+              <th>Solicitud</th>
+              <br>
+              <input class="form-control" type="text" name="nc" placeholder="No. Control" required >
+              <br>
+              <input class="form-control" type="text" name="programa" placeholder="Programa" required>
+              <br>
+              <input class="form-control" type="text" name="institucion" placeholder="Institucion" required>
+              <br>
+              <input class="form-control" type="text" name="encargado_pro" placeholder="Encargado" required>
+              <br>
+              <input class="form-control" type="date" name="fechaini" placeholder="Fecha inicio" required>
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Add
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+

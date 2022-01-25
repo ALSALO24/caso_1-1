@@ -1,0 +1,31 @@
+<% include partials/_headersol %>
+
+<div class="container">
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-5 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <form action="/edit/<%= solicitud._id %>" method="post">
+            <div class="form-group">
+              <input class="form-control" type="text"  name="nc" placeholder="No. Control" value="<%= solicitud.nc %>">
+              <br>
+              <input class="form-control" type="text"  name="programa" placeholder="Programa" value="<%= solicitud.programa %>">
+              <br>
+              <input class="form-control" type="text" name="institucion" placeholder="Institucion" value="<%= solicitud.institucion %>">
+              <br>
+              <input class="form-control" type="text" name="encargado_pro" placeholder="Encargado" value="<%= solicitud.encargado_pro %>">
+              <br>
+              <input class="form-control" type="date" name="fechaini" placeholder="Fecha inicio" value="<%= solicitud.fechaini %>">
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Update 
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partials/_footer%>

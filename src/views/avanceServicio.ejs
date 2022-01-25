@@ -1,0 +1,49 @@
+<% include partials/_headerava %>
+
+<div class="container">
+
+  <div class="row">
+    <!-- LIST -->
+    <div class="col-md-7 offset-md-3" >
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>N°</th>
+            <th>No. Control</th>
+            <th>Programa</th>
+            <th>Institucion</th>
+            <th>Encargado</th>
+            <th>Fecha de inicio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i < solicitud.length; i++) { %>
+            <tr>
+              <td><%= i + 1%></td>
+              <td><strong><%= solicitud[i].nc %></strong></td>
+              <td><strong><%= solicitud[i].programa %></strong></td>
+              <td><strong><%= solicitud[i].institucion %></strong></td>
+              <td><strong><%= solicitud[i].encargado_pro %></strong></td>
+              <td><strong><%= solicitud[i].fechaini %></strong></td>
+              <td>
+                <a
+                  class="<%= solicitud[i].status ? 'btn btn-success' : 'btn btn-dark'%>"
+                  href="/turn/<%= solicitud[i]._id %>">Done</a>
+                <a href="/delete/<%= solicitud[i]._id %>"
+                  class="btn btn-danger">
+                  Delete
+                </a>
+                <a href="/edit/<%= solicitud[i]._id %>" class="btn btn-info">
+                  Edit
+                </a>
+              </td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+</div>
+
